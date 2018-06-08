@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Initial</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
+    <style>
+        body{
+            background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+        }
+        a{
+            color: rgb(32, 104, 240);
+            text-decoration: none;
+        }
+        .main-container{
+            margin-top: 25px;
+            padding: 25px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        header{
+            background: #FFFFFF;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            height: 60px;
+        }
+        header p{
+            flex-grow: 1;
+        }
+        header nav{
+            flex-grow: 2;
+            height: inherit;
+        }
+        header p, header nav{
+            padding: 0 10px;
+        }
+        header .logo{
+            color: #444;
+            font-family: 'Lobster', cursive;
+            font-weight: bold;
+            font-size: 25px;
+            padding-left: 20px;
+        }
+        .navMenu ul{
+            list-style: none;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .navMenu ul li{
+            height: inherit;
+            display: inline-table;
+            padding: 0 2px;
+            margin: 0 -10px 0 0;
+        }
+        .navMenu ul li a, .navMenu ul li span{
+            /*height: 100%;*/
+            display: table-cell;
+            vertical-align: middle; 
+            padding: 0 10px;
+            
+        }
+        .navMenu ul li a:hover{
+            background:rgb(42, 143, 211);
+            color: #FFF;
+        }
+        .active{
+            background:rgb(42, 143, 211);
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+    <header>
+        <p class="logo"><i class="icon-rocket icons"></i> Rocket Premium</p>
+        <nav class="navMenu">
+            <ul>
+                <li>
+                    <span class="active"><i class="icon-home icons"></i> Home</span>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-pencil icons"></i> Posts</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-info icons"></i> About</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-envelope icons"></i> Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+</body>
+  
+</html>
