@@ -8,9 +8,10 @@
     <title>Initial</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+    />
     <style>
-        body{
+        body {
             background-image: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
             background-repeat: no-repeat;
             background-size: cover;
@@ -18,17 +19,20 @@
             font-family: 'Quicksand', sans-serif;
             color: #333;
         }
-        a{
+
+        a {
             color: rgb(32, 104, 240);
             text-decoration: none;
         }
-        .main-container{
+
+        .main-container {
             margin-top: 25px;
             padding: 25px;
             width: 1200px;
             margin: 0 auto;
         }
-        header{
+
+        header {
             background: #FFFFFF;
             border-radius: 5px 5px 0 0;
             display: flex;
@@ -37,91 +41,159 @@
             flex-direction: row;
             height: 60px;
         }
-        header p{
+
+        header p {
             flex-grow: 1;
         }
-        header nav{
+
+        header nav {
             height: inherit;
         }
-        header .searchNav{
-            flex-grow: 1;
-        }
-        header p, header nav{
+
+        header p,
+        header nav {
             padding: 0 10px;
         }
-        header .logo{
+
+        header .logo {
             color: #444;
             font-family: 'Lobster', cursive;
             font-weight: bold;
             font-size: 25px;
             padding-left: 20px;
         }
-        .navMenu ul{
+
+        .navMenu ul {
             list-style: none;
             height: 100%;
             padding: 0;
             margin: 0;
         }
-        .navMenu ul li{
+
+        .navMenu ul li {
             height: inherit;
             display: inline-table;
             padding: 0 2px;
             margin: 0 -10px 0 0;
         }
-        .navMenu ul li:last-child{
+
+        .navMenu ul li:last-child {
             padding-right: 0;
             border-top-right-radius: 5px;
         }
-        .navMenu ul li:last-child a, .navMenu ul li:last-child span{
+
+        .navMenu ul li:last-child a,
+        .navMenu ul li:last-child span {
             border-top-right-radius: 5px;
         }
-        .navMenu ul li a, .navMenu ul li span{
+
+        .navMenu ul li a,
+        .navMenu ul li span {
             /*height: 100%;*/
             display: table-cell;
-            vertical-align: middle; 
+            vertical-align: middle;
             padding: 0 10px;
-            
+            transition: 0.7s all;
+
         }
-        .navMenu ul li a:hover{
-            background:rgb(42, 143, 211);
+
+        .navMenu ul li a:hover {
+            background: rgb(42, 143, 211);
             color: #FFF;
         }
-        .active{
-            background:rgb(42, 143, 211);
+
+        .active {
+            background: rgb(42, 143, 211);
             color: #FFF;
+        }
+
+        .searchNav {
+            background: rgb(42, 143, 211);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            /*display: none;*/
+        }
+        .searchNav form {
+            height: 60px;
+            display: flex;
+            vertical-align: middle;
+        }
+        .searchNav form input{
+            border: 0px solid transparent;
+            outline: 0px solid transparent;
+            color: #333;
+            padding: 10px;
+            width: 500px;
+            font-size: 25px;
+            transition: 0.7s all;
+        }
+        .searchNav form input:focus{
+            transform: scale(1.2);
+        }
+        .searchNav form button{
+            border: 0px solid transparent;
+            background: #FFF;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .slideshow {
+            height: 200px;
+            background: rgb(42, 143, 211);
+            padding: 10px;
+            display: none;
         }
     </style>
 </head>
 
 <body>
     <div class="main-container">
-    <header>
-        <p class="logo"><i class="icon-rocket icons"></i> Rocket Premium</p>
-        <form class="searchNav">
-            <input type="text"/>
-            <button type="submit"><i class="icon-magnifier icons"></i></button>
-        </form>
-        <nav class="navMenu">
-            <ul>
-                <li>
-                    <span class="active"><i class="icon-home icons"></i> Home</span>
-                </li>
-                <li>
-                    <a href="#"><i class="icon-pencil icons"></i> Posts</a>
-                </li>
-                <li>
-                    <a href="#"><i class="icon-info icons"></i> About</a>
-                </li>
-                <li>
-                    <a href="#"><i class="icon-envelope icons"></i> Contact</a>
-                </li>
-                <li>
-                    <span class="active"><i class="icon-home icons"></i> Home</span>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <header>
+            <p class="logo">
+                <i class="icon-rocket icons"></i> Rocket Premium</p>
+            <nav class="navMenu">
+                <ul>
+                    <li>
+                        <span>
+                            <i class="icon-home icons"></i> Home</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-magnifier icons"></i> Search</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-pencil icons"></i> Posts</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-info icons"></i> About</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-envelope icons"></i> Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="searchNav">
+            <form>
+                <input type="text" placeholder="Search"/>
+                <button type="submit">
+                    <i class="icon-magnifier icons"></i>
+                </button>
+            </form>
+        </div>
+        <section class="slideshow">
+            <p>This is a section</p>
+            <span>Testing</span>
+            <div>Div teste</div>
+        </section>
     </div>
 </body>
-  
+
 </html>
