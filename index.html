@@ -40,6 +40,12 @@
             justify-content: space-between;
             flex-direction: row;
             height: 60px;
+            border-color: #333;
+            border-left: 1px;
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 0;
+            border-style: solid;
         }
 
         header p {
@@ -108,18 +114,40 @@
         }
 
         .searchNav {
-            background: rgb(42, 143, 211);
+            position: relative;
+            background-image: url('./img/search.jpeg');
+            background-color: rgb(42, 143, 211);
+            /*background-position: bottom;*/
+            background-blend-mode: luminosity;
             padding: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 200px;
+            transition: 0.7s all;
             /*display: none;*/
+            border-color: #333;
+            border-left: 1px;
+            border-top: 0;
+            border-right: 1px;
+            border-bottom: 0;
+            border-style: solid;
+        }
+        .background-color{
+            position: absolute;
+            z-index: 1;
+            background: rgba(99, 38, 240, 0.5);
+            display: block;
+            width: 100%;
+            height: 240px;
+            -moz-backdrop-filter:blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
         .searchNav form {
             height: 60px;
             display: flex;
             vertical-align: middle;
+            z-index: 2;
         }
         .searchNav form input{
             border: 0px solid transparent;
@@ -140,12 +168,53 @@
             font-weight: bold;
             cursor: pointer;
         }
-
         .slideshow {
             height: 200px;
             background: rgb(42, 143, 211);
             padding: 10px;
             display: none;
+            transition: 0.7s all;
+            border-color: #333;
+            border-left: 1px;
+            border-top: 1px;
+            border-right: 1px;
+            border-bottom: 0;
+            border-style: solid;
+        }
+        .navBox{
+            background: #FFF;
+            height: 64px;
+            border-color: #333;
+            border-left: 1px;
+            border-top: 0;
+            border-right: 1px;
+            border-bottom: 0;
+            border-style: solid;
+        }
+        .main{
+            background: rgb(216, 216, 216);
+            min-height: 500px;
+            border-color: #333;
+            border-left: 1px;
+            border-top: 0;
+            border-right: 1px;
+            border-bottom: 0;
+            border-style: solid;
+        }
+        footer {
+            background: #FFFFFF;
+            border-radius: 0 0 5px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            height: 60px;
+            border-color: #333;
+            border-left: 1px;
+            border-top: 0;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-style: solid;
         }
     </style>
 </head>
@@ -162,11 +231,11 @@
                             <i class="icon-home icons"></i> Home</span>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#void" onclick="toggle('searchNav');">
                             <i class="icon-magnifier icons"></i> Search</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#void" onclick="toggle('slideShow');">
                             <i class="icon-pencil icons"></i> Posts</a>
                     </li>
                     <li>
@@ -180,20 +249,40 @@
                 </ul>
             </nav>
         </header>
-        <div class="searchNav">
+        <section class="searchNav showRoom" id="searchNav">
+            <div class="background-color"></div>
             <form>
                 <input type="text" placeholder="Search"/>
                 <button type="submit">
                     <i class="icon-magnifier icons"></i>
                 </button>
             </form>
-        </div>
-        <section class="slideshow">
+        </section>
+        <section class="slideshow showRoom" id="slideShow">
             <p>This is a section</p>
             <span>Testing</span>
             <div>Div teste</div>
         </section>
+        <nav class="navBox">
+
+        </nav>
+        <section class="main" id="">
+
+        </section>
+        <footer>
+
+        </footer>
     </div>
+    <script>
+        function toggle(id){
+            hidden_class = document.getElementsByClassName('showRoom');
+            for(i = 0; i < hidden_class.length; i++){
+                hidden_class[i].style.display = 'none';
+            }
+            element = document.getElementById(id);
+            element.style.display = 'flex';
+        }
+    </script>
 </body>
 
 </html>
